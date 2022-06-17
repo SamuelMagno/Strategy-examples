@@ -2,7 +2,7 @@
 
 namespace src;
 
-class SortAsc implements SortStrategy
+class SortDesc implements SortStrategy
 {
     public function doSort(array $data): array
     {

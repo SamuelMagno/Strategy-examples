@@ -18,7 +18,7 @@ class SortContext {
         $this->strategy = $strategy;
     }
 
-    public function sortData($data): array {
+    public function sortData(array $data): array {
         return $this->strategy->doSort($data);
     }
 }

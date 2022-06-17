@@ -7,10 +7,16 @@ use src\SortAsc;
 use src\SortDesc;
 use src\SortStrategy;
 
-echo "Strategy Example";
+echo "Strategy Example <br/><br/>";
 
-$data = ['4,3,2,5,6,1'];
+$data = [5,3,2,4,6,1];
 
-$sort = new SortContext(new SortAsc());
+echo "Sort Asc: ";
+$context = new SortContext(new SortAsc());
+print_r($context->sortData($data));
 
-var_dump($sort->sortData($data));
+echo "<br/><br/>";
+
+echo "Sort Desc: ";
+$context->setStrategy(new SortDesc());
+print_r($context->sortData($data));
